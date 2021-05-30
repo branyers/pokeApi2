@@ -15,7 +15,7 @@ function RandomButton() {
   return (
     <div >
       <button onClick={handleClick}>
-        Surprise me
+        Pokemon Ramdom
       </button>
     </div>
   );

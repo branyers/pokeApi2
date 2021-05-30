@@ -50,14 +50,14 @@ function SearchBox() {
           type="text"
           name="pokemon"
           onChange={(e) => setToSearch(e.target.value)}
-          placeholder="Search for Name or Id!"
+          placeholder="Busca tu pokemon por nombre o por id!"
         />
         <button
           type="button"
           onClick={() => handlerSearch(toSearch)}
-        ></button>
+        >Buscar Pokemon</button>
       </div>
-      <div>
+      <div >
         <p >Search for types</p>
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -65,7 +65,7 @@ function SearchBox() {
           {checkboxTypes.length &&
             checkboxTypes.map((value) => {
               return (
-                <span key={value.url}>
+                <span key={value.url} >
                   <label>
                     {value.name.toUpperCase()}{" "}
                     <input
@@ -80,6 +80,7 @@ function SearchBox() {
             })}
 
           <input
+
             type="submit"
             value="Search"
           />
