@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import { printEncounters } from "../services/Functions";
 
 function Encounters() {
-  let location = useLocation();
-  let dataRef = location.state;
   const [encountersData, setEcountersData] = useState([]);
 
   useEffect(() => {
@@ -14,9 +12,10 @@ function Encounters() {
         dataRef.dataPokemon.location_area_encounters
       ).then((res) => setEcountersData(res));
     }
-  }, [dataRef.dataPokemon.location_area_encounters,encountersData.length]);
+  }, []);
 
-  
+  let location = useLocation();
+  let dataRef = location.state;
   
   return (
     <>

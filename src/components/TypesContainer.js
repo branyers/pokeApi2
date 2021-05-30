@@ -33,7 +33,7 @@ function TypesContainer() {
     ) {
       setActualPage(navigationData.state?.page);
     }
-  }, [navigationData.state?.page, actualPage]);
+  }, [navigationData.state?.page]);
 
   useEffect(() => {
     if (pokemonData?.length) {
