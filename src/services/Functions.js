@@ -44,16 +44,16 @@ export function getStats(stats) {
 
   const template = (
     <>
-      <p className="Pokedex__pokemon-info">
+      <p>
         HP: {statsValues?.hp ? statsValues.hp : "Undefined"}
       </p>
-      <p className="Pokedex__pokemon-info">
+      <p>
         Attack: {statsValues?.attack ? statsValues.attack : "Undefined"}
       </p>
-      <p className="Pokedex__pokemon-info">
+      <p>
         Defense: {statsValues?.defense ? statsValues.defense : "Undefined"}
       </p>
-      <p className="Pokedex__pokemon-info">
+      <p>
         Speed: {statsValues?.speed ? statsValues.speed : "Undefined"}
       </p>
     </>
@@ -69,7 +69,7 @@ export function useQuery() {
 export function printTypes(arrayTypes) {
   const retArr = arrayTypes.map((element) => {
     return (
-      <p className="Pokedex__types" key={element.type.name}>
+      <p key={element.type.name}>
         {element.type.name.replace(
           element.type.name[0],
           element.type.name[0].toUpperCase()
@@ -83,7 +83,7 @@ export function printTypes(arrayTypes) {
 export function printStats(arrStats) {
   const retArr = arrStats.map((element) => {
     return (
-      <p key={element.stat.url} className="Pokedex__pokemonInfo-stat">
+      <p key={element.stat.url}>
         {element.stat.name}: {element.base_stat}
       </p>
     );
@@ -94,7 +94,7 @@ export function printStats(arrStats) {
 export function printMoves(arrMoves) {
   const retArr = arrMoves.map((element) => {
     return (
-      <p key={element.move.url} className="Pokedex-pokemonInfo-move">
+      <p key={element.move.url}>
         {element.move.name}
       </p>
     );
@@ -105,7 +105,7 @@ export function printMoves(arrMoves) {
 export function printAbilities(arrAbilities) {
   const retArr = arrAbilities.map((element) => {
     return (
-      <p key={element.ability.name} className="Pokedex-pokemonInfo-ability">
+      <p key={element.ability.name}>
         {element.ability.name}
       </p>
     );
@@ -119,14 +119,14 @@ export async function printEncounters(arrEncounters) {
     const data = await response.json();
     if (!data.length) {
       return [
-        <p key="Encounter-undefined" className="Pokedex__pokemonInfo-encounter">
+        <p key="Encounter-undefined">
           Unknow
         </p>,
       ];
     }
     const retArr = data.map((element, index) => {
       return (
-        <p key={index} className="Pokedex__pokemonInfo-encounter">
+        <p key={index}>
           Encounter: {element.location_area.name}
         </p>
       );
@@ -134,7 +134,7 @@ export async function printEncounters(arrEncounters) {
     return retArr;
   } catch (err) {
     return [
-      <p key="Encounter-undefined" className="Pokedex__pokemonInfo-encounter">
+      <p key="Encounter-undefined">
         Unknow
       </p>,
     ];

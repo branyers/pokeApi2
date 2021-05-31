@@ -4,7 +4,6 @@ import { getMultipleTypes } from "../services/CallToApi";
 import GridContainer from "./GridContainer";
 import Pagination from "./Pagination";
 import PokemonCard from "./PokemonCard";
-
 import { useQuery } from "../services/Functions";
 
 function TypesContainer() {
