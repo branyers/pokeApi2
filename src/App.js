@@ -34,7 +34,6 @@ function App() {
               <Route path="/login" component={Login} />
               <ProtectedRoute path="/">
                 <SearchBox />
-                <RandomButton />
               </ProtectedRoute>
             </Switch>
           </Router>
