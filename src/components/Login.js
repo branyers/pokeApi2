@@ -3,10 +3,6 @@ import { useHistory } from "react-router";
 import { authContenxt } from "../Contexts/AuthContext";
 import '../App.css'
 
-/*
-
-*/
-
 
 function Login() {
   let history = useHistory();
@@ -23,7 +19,7 @@ function Login() {
        <div className="row">
           <div>
             <button className="btn btn-primary"  onClick={handleClick}>
-            Sign in 
+            iniciar session
             </button>
           </div>
        </div>
