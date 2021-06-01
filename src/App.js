@@ -8,7 +8,6 @@ import TypesContainer from "./components/TypesContainer";
 import NameOrIdContainer from "./components/NameOrIdContainer";
 import ProtectedRoute from "./components/ProtectedRoute";
 import SearchBox from "./components/SearchBox";
-import RandomButton from "./components/RandomButton";
 import "./App.css";
 import Encounters from "./components/Encounters";
 

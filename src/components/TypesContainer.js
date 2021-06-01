@@ -7,12 +7,14 @@ import PokemonCard from "./PokemonCard";
 import { useQuery } from "../services/Functions";
 
 function TypesContainer() {
+
   let queryTypes = useQuery().getAll("type");
   const [pokemonData, setPokemonData] = useState([]);
   const [actualPage, setActualPage] = useState(0);
   const [pokemonList, setPokemonList] = useState([]);
   let navigationData = useLocation();
   const numberOfElements = 4;
+  
   useEffect(() => {
     if (navigationData.state?.dataPokemon && !pokemonData?.length) {
       setPokemonData(navigationData.state?.dataPokemon);

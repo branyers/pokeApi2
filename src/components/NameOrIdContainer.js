@@ -33,9 +33,6 @@ function NameOrIdContainer() {
                if (element?.name) {
                   return (
                      <>
-                     <div className="row">
-                        <div className=" col-md-6 " >
-
                            <PokemonCard
                            key={element.id}
                            pokemon={element}
@@ -45,9 +42,6 @@ function NameOrIdContainer() {
                               : queryNameOrId
                            }
                         />
-
-                        </div>
-                     </div>
                      </>
                   );
                }

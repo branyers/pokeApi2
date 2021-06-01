@@ -6,18 +6,54 @@
 }
 
 body {
-  background-color: #20094f;
+  /* background-color: #20094f; */
+  background: linear-gradient(110deg, #0c0506b6, #090a09);
+  min-height: 100vh;
 }
+
+/*
+   LOGIN 
+*/
+
 .container-sign-in {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 80vh;
 }
+
+.card-login {
+  margin: 10px;
+  padding: 100px;
+  border: solid rgba(0, 0, 0, 0.796);
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  min-height: 300px;
+}
+
+.card-image {
+  box-sizing: border-box;
+}
+.image-poke {
+  background-repeat: no-repeat;
+  min-height: 500px;
+  background-image: url(https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png);
+  width: 100%;
+}
+
+/*
+   LOGIN /
+*/
+
 .row {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .search-by-name {
   display: flex;
@@ -43,25 +79,47 @@ cards search poke
 */
 
 /*
+// =================================== //
+Search for name 
+*/
+.card-search-for-name {
+}
+/*
+Search for name // 
+// =================================== //
+*/
+
+/*
+// =================================== //
 Search by type 
 */
 
 .cards-design {
   text-align: center;
   color: white;
-  background: linear-gradient(110deg, #3db2cfb6, #41da56);
+  background: linear-gradient(150deg, #e82c2cb6, #3e70ee75);
   border-radius: 20px;
   margin: 5px;
+  min-height: 360px;
 }
 .search-field {
   padding: 10px;
-  height: 60px;
+  min-height: 70px;
 }
-.selected {
-  width: 120px;
-  height: 35px;
-  margin: 10px;
+.title-menu-poke {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  height: 28px;
+  width: 250px;
 }
+
+/*
+  Search by type / 
+  //===========================================//
+*/
 .btn {
   border: black solid 1px;
   border-radius: 20px;
@@ -75,4 +133,27 @@ Search by type
 
 .card-poke {
   border: solid 5px;
+}
+
+.menu-pokes-in-box-type {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: black;
+  background: linear-gradient(110deg, #5096cc, #a8358b);
+  max-width: 300px;
+  min-height: 500px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.name-checkbox {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 22px;
+  font-size: 20px;
+}
+.label-color {
+  margin-left: 8px;
 }

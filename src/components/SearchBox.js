@@ -3,9 +3,11 @@ import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import { typesContext } from "../Contexts/TypesContext";
 import { getTypes } from "../services/CallToApi";
+import CardCheckbox from "./CardCheckbox";
 import RandomButton from './RandomButton'
 
 function SearchBox() {
+   const [flag, setflag] = useState(false)
   const [toSearch, setToSearch] = useState("");
   const { checkboxTypes, saveTypes } = useContext(typesContext);
   const { register, handleSubmit } = useForm();
@@ -45,15 +47,14 @@ function SearchBox() {
   };
 
   return (
-    <div className="container " >
+    <div className="container mt-2" >
       <div className="row" >
-         <div className=" cards-design card-search-for-name col-md-5 mt-5">
+         <div className="card cards-design col-md-5 mt-5 ">
             <div className="search-by-name mt-4 " >
-            <div>
                <div>
                   <label><h4 >Search for Name</h4></label>
                </div>
-               <div>
+               <div className="mt-5">
                   <input
                   type="text"
                   name="pokemon"
@@ -61,15 +62,14 @@ function SearchBox() {
                   placeholder="Name or id!"
                />
                </div>
-            </div>
             <div>
                <button
-               className="btn btn-primary mt-4"
+               className="btn btn-primary mt-5"
                type="button"
                onClick={() => handlerSearch(toSearch)}
             >Buscar Pokemon</button>
             </div>
-            <div className="mt-3">
+            <div className="mt-5">
                <RandomButton />
             </div>
          </div>
@@ -83,17 +83,20 @@ function SearchBox() {
                         <div className="mt-2">
                            <label><h4>Search for Type</h4></label>
                         </div>
-                        <div className="search-field mt-2">
-                           <select className="selected">
-                        {checkboxTypes.length &&
-                           checkboxTypes.map((value) => {
-                           return (
-                              <>
-                                 <option ref={register} value={value.name} >{value.name}</option>
-                              </>
-                           );
-                           })}
-                           </select>
+                        <div className="search-field mt-2"> 
+                           <div  className="">
+                              <div>
+                                 <button onMouseOver={() => setflag(true)}  >
+                                    <h6 className="title-menu-poke">ver los tipos de pokemones </h6>
+                                 </button>
+                                 <div className="box-type-poke">
+                                    {
+                                       flag ? <CardCheckbox register={register} checkboxTypes={checkboxTypes} /> : ''
+                                    }
+                                 </div>
+                              </div>
+                           </div>
+                     </div>
                         <div className="mt-2">
                            <input
                               className="btn btn-primary"
@@ -101,7 +104,6 @@ function SearchBox() {
                               value="Search"
                            />
                         </div>  
-                     </div>
                   </form>
                   <div className="mt-4">
                      <RandomButton />
