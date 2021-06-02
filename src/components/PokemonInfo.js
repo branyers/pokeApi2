@@ -26,33 +26,35 @@ function PokemonInfo() {
   };
 
   return (
-    <div className="link-back" >
-      {typeof location.state?.search === "string" && (
-        <>
-        <div className="links-back">
-            <Link
-            to={{
-              pathname: "/pokedex/search-pokemon/" + location.state.search,
-              state: location.state,
-            }}
-            replace
-          >
-            back
-          </Link>
-        </div>
-        <div className="links-back" >
-            <Link
-            to={{
-              pathname: `/pokedex/pokemon/${location.state.dataPokemon.id}/encounters`,
-              state: location.state,
-            }}
-            replace
-          >
-            Encounters
-          </Link>
-        </div>
-        </>
-      )}
+    <div className="container" >
+       <div className="row">
+         {typeof location.state?.search === "string" && (
+         <>
+         <div className="links-back">
+               <Link
+               to={{
+               pathname: "/pokedex/search-pokemon/" + location.state.search,
+               state: location.state,
+               }}
+               replace
+            >
+               back
+            </Link>
+         </div>
+         <div className="links-back" >
+               <Link
+               to={{
+               pathname: `/pokedex/pokemon/${location.state.dataPokemon.id}/encounters`,
+               state: location.state,
+               }}
+               replace
+            >
+               Encounters
+            </Link>
+         </div>
+         </>
+         )}
+       </div>
       {typeof location.state?.search === "object" && (
         <>
         <div className="container">

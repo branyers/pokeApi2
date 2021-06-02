@@ -105,9 +105,6 @@ function SearchBox() {
                            />
                         </div>  
                   </form>
-                  <div className="mt-4">
-                     <RandomButton />
-                  </div>
                </div>
              </div>
          </div>
