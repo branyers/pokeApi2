@@ -49,12 +49,12 @@ body {
    LOGIN /
 */
 
-.row {
+/* .row {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-}
+} */
 .search-by-name {
   display: flex;
   flex-direction: column;
@@ -82,8 +82,6 @@ cards search poke
 // =================================== //
 Search for name 
 */
-.card-search-for-name {
-}
 /*
 Search for name // 
 // =================================== //
@@ -156,4 +154,50 @@ Search by type
 }
 .label-color {
   margin-left: 8px;
+}
+
+/*
+  CARDS POKES 
+*/
+
+.cards-pokes {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  background-color: #fb6c6c;
+  max-height: 450px;
+}
+.card-body-cards {
+  padding: 10px;
+  background-color: cornsilk;
+  border-radius: 10px;
+}
+.titles-cards {
+  font-size: 18px;
+  padding: 7px;
+  font-family: sans-serif;
+}
+
+/*
+  INFO POKE INDIVIDUAL 
+*/
+.links-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: solid 10px white;
+  width: 100px;
+  height: 100px;
+}
+.link-back {
+  color: cornsilk;
+  border: solid 2px yellow;
+}
+
+.row-hola {
+  color: cornsilk;
+  display: flex;
+  justify-content: center;
+  border: solid 2px;
 }

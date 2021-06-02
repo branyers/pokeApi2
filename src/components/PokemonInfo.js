@@ -26,10 +26,11 @@ function PokemonInfo() {
   };
 
   return (
-    <div >
+    <div className="link-back" >
       {typeof location.state?.search === "string" && (
         <>
-          <Link
+        <div className="links-back">
+            <Link
             to={{
               pathname: "/pokedex/search-pokemon/" + location.state.search,
               state: location.state,
@@ -38,7 +39,9 @@ function PokemonInfo() {
           >
             back
           </Link>
-          <Link
+        </div>
+        <div className="links-back" >
+            <Link
             to={{
               pathname: `/pokedex/pokemon/${location.state.dataPokemon.id}/encounters`,
               state: location.state,
@@ -47,28 +50,42 @@ function PokemonInfo() {
           >
             Encounters
           </Link>
+        </div>
         </>
       )}
       {typeof location.state?.search === "object" && (
         <>
-          <Link
-            to={{
-              pathname: "/pokedex/search-types/types?" + typesUrl(),
-              state: location.state,
-            }}
-            replace
-          >
-            back
-          </Link>
-          <Link
-            to={{
-              pathname: `/pokedex/pokemon/${location.state.id}/encounters`,
-              state: location.state,
-            }}
-            replace
-          >
-            Encounters
-          </Link>
+        <div className="container">
+           <div className="row">
+               <div className="links-back">
+                  <Link
+                  to={{
+                  pathname: "/pokedex/search-types/types?" + typesUrl(),
+                  state: location.state,
+                  }}
+                  replace
+               >
+                  back
+               </Link>
+
+               </div>
+               <div className="links-back">
+
+                     <Link
+                  to={{
+                  pathname: `/pokedex/pokemon/${location.state.id}/encounters`,
+                  state: location.state,
+                  }}
+                  replace
+               >
+                  Encounters
+               </Link>
+
+               </div>
+
+
+           </div>
+        </div>
         </>
       )}
       {location.state?.dataPokemon && (
@@ -80,23 +97,23 @@ function PokemonInfo() {
           />
           <p >{dataRef.name}</p>
           <div >
-            <p >
+            <p className="row-hola">
               Height: {dataRef.height}
             </p>
-            <p >
+            <p className="row-hola" >
               Weight: {dataRef.weight}
             </p>
           </div>
-          <div >
-            {printTypes(dataRef.types)}
+          <div className="row-hola">
+             {printTypes(dataRef.types)}
           </div>
-          <div >
+          <div className="row-hola">
             {printStats(dataRef.stats)}
           </div>
-          <div >
+          <div className="row-hola">
             {printMoves(dataRef.moves)}
           </div>
-          <div >
+          <div className="row-hola" >
             {printAbilities(dataRef.abilities)}
           </div>
         </section>

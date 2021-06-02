@@ -25,44 +25,48 @@ function NameOrIdContainer() {
 
   return (
      <>
-     <div className="container">
+     
+     <div className="">
         <div className="row">
-         <GridContainer>
-            {pokemonData.length !== 0 &&
-            pokemonData.map((element) => {
-               if (element?.name) {
-                  return (
-                     <>
-                           <PokemonCard
-                           key={element.id}
-                           pokemon={element}
-                           search={
-                              navigationData.state?.search
-                              ? navigationData.state?.search
-                              : queryNameOrId
-                           }
-                        />
-                     </>
-                  );
-               }
-               return null;
-            })}
-            {pokemonData[0] === undefined && (
-            <>
-               <p style={{ width: "100%", textAlign: "center" }}>Not Found</p>
-               <Link
-                  to="/"
-                  style={{
-                  width: "100%",
-                  textAlign: "center",
-                  textDecoration: "none",
-                  }}
-               >
-                  Home
-               </Link>
-            </>
-            )}
-         </GridContainer>
+           <div className="col-md-3">
+            <GridContainer>
+               {pokemonData.length !== 0 &&
+               pokemonData.map((element) => {
+                  if (element?.name) {
+                     return (
+                        <>
+                        
+                              <PokemonCard
+                              key={element.id}
+                              pokemon={element}
+                              search={
+                                 navigationData.state?.search
+                                 ? navigationData.state?.search
+                                 : queryNameOrId
+                              }
+                           />
+                        </>
+                     );
+                  }
+                  return null;
+               })}
+               {pokemonData[0] === undefined && (
+               <>
+                  <p style={{ width: "100%", textAlign: "center" }}>Not Found</p>
+                  <Link
+                     to="/"
+                     style={{
+                     width: "100%",
+                     textAlign: "center",
+                     textDecoration: "none",
+                     }}
+                  >
+                     Home
+                  </Link>
+               </>
+               )}
+            </GridContainer>
+           </div>
         </div>
      </div>
     </>

@@ -14,7 +14,7 @@ function TypesContainer() {
   const [pokemonList, setPokemonList] = useState([]);
   let navigationData = useLocation();
   const numberOfElements = 4;
-  
+
   useEffect(() => {
     if (navigationData.state?.dataPokemon && !pokemonData?.length) {
       setPokemonData(navigationData.state?.dataPokemon);
@@ -63,18 +63,22 @@ function TypesContainer() {
           .map((element, index) => {
             if (element?.name) {
               return (
-                <PokemonCard
-                  key={element.id}
-                  pokemon={element}
-                  search={
-                    navigationData.state?.search
-                      ? navigationData.state?.search
-                      : queryTypes
-                  }
-                  pokemonData={pokemonData}
-                  page={actualPage}
-                  id={actualPage * numberOfElements + index}
-                />
+                 <>
+                 <div className="col-md-3">
+                  <PokemonCard
+                     key={element.id}
+                     pokemon={element}
+                     search={
+                        navigationData.state?.search
+                        ? navigationData.state?.search
+                        : queryTypes
+                     }
+                     pokemonData={pokemonData}
+                     page={actualPage}
+                     id={actualPage * numberOfElements + index}
+                  />
+                 </div>
+                 </>
               );
             }
             return null;
