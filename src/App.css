@@ -159,12 +159,32 @@ Search by type
 /*
   CARDS POKES 
 */
-
-.cards-pokes {
+section {
+  display: flex;
+  justify-content: center;
+}
+.row-cards-two {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  flex-direction: column;
+}
+.card-one {
+  width: 50%;
+  border-radius: 30px;
+  color: black;
+  display: flex;
+  text-align: center;
+  background-color: violet;
+}
+.card-two {
   border-radius: 20px;
-  background-color: #fb6c6c;
+}
+.cards-pokes {
+  display: flex;
+  background-color: tomato;
+  flex-direction: column;
+  border-radius: 20px;
   max-height: 450px;
 }
 .card-body-cards {
@@ -185,19 +205,48 @@ Search by type
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  border: solid 10px white;
   width: 100px;
   height: 100px;
 }
-.link-back {
-  color: cornsilk;
-  border: solid 2px yellow;
+.margin {
+  margin: 5px;
 }
-
+.card-info-habilities {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .row-hola {
   color: cornsilk;
+}
+.displ-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.img-poke {
+  width: 100%;
+}
+
+.card-poke-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: solid 3px white;
+  min-height: 200px;
+}
+
+.img-poke-encounter {
   display: flex;
   justify-content: center;
-  border: solid 2px;
+  width: 40%;
+}
+.info-one {
+  color: black;
+}
+.info-two {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: black;
 }

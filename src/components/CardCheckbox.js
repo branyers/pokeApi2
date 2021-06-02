@@ -10,10 +10,11 @@ const CardCheckbox = ({ register, checkboxTypes }) => {
                   <>
                   <div className="name-checkbox">
                      <div className="label-color">
-                        <label htmlFor={value.name} >{value.name}</label>
+                        <label key={value.name} htmlFor={value.name} >{value.name}</label>
                      </div>
                      <div className="input-color">
                         <input 
+                        key={value.name}
                         id={value.name}
                         type="checkbox"
                         name={value.name}

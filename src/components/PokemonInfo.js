@@ -67,55 +67,69 @@ function PokemonInfo() {
                >
                   back
                </Link>
-
                </div>
                <div className="links-back">
 
                      <Link
-                  to={{
-                  pathname: `/pokedex/pokemon/${location.state.id}/encounters`,
-                  state: location.state,
-                  }}
+                        to={{
+                        pathname: `/pokedex/pokemon/${location.state.id}/encounters`,
+                        state: location.state,
+                        }}
                   replace
                >
                   Encounters
-               </Link>
-
+                  </Link>
                </div>
-
-
            </div>
         </div>
         </>
       )}
       {location.state?.dataPokemon && (
         <section >
-          <p >#{dataRef.order}</p>
-          <img
-            src={validateImg(dataRef.sprites)}
-            alt={dataRef.name}
-          />
-          <p >{dataRef.name}</p>
-          <div >
-            <p className="row-hola">
-              Height: {dataRef.height}
-            </p>
-            <p className="row-hola" >
-              Weight: {dataRef.weight}
-            </p>
-          </div>
-          <div className="row-hola">
-             {printTypes(dataRef.types)}
-          </div>
-          <div className="row-hola">
-            {printStats(dataRef.stats)}
-          </div>
-          <div className="row-hola">
-            {printMoves(dataRef.moves)}
-          </div>
-          <div className="row-hola" >
-            {printAbilities(dataRef.abilities)}
-          </div>
+           <div className="container ">
+              <div className="row-cards-two ">
+                 <div className="card-one">
+                    <div className="img-poke-encounter">
+                        <img className="img-poke"  src={validateImg(dataRef.sprites)} alt={dataRef.name}/>
+                     </div>
+                     <div className="card-body">
+                        <div className="info-one">
+                           <div className="colum">
+                              <div className="displ-flex">
+                           {printTypes(dataRef.types)}
+                        </div>
+                              <h4 >{dataRef.name}</h4>
+                              <h2 >#{dataRef.order}</h2>
+                              <p className="row-hola">
+                                 Height: {dataRef.height}
+                              </p>
+                              <p className="row-hola" >
+                                 Weight: {dataRef.weight}
+                              </p>
+                              <div className="">
+                                 {printStats(dataRef.stats)}
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                 <div className="card-two">
+                     <div className="info-two " >
+                           <div className="row">
+                              <div className="card-info-habilities">
+                                 <div className="displ-flex">
+                                    {printMoves(dataRef.moves)}
+                                 </div>
+                                 <div className="displ-flex" >
+                                    {printAbilities(dataRef.abilities)}
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                 </div>
+              </div>
+           </div>
         </section>
       )}
     </div>

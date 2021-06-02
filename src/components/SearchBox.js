@@ -91,7 +91,7 @@ function SearchBox() {
                                  </button>
                                  <div className="box-type-poke">
                                     {
-                                       flag ? <CardCheckbox register={register} checkboxTypes={checkboxTypes} /> : ''
+                                       flag ? <CardCheckbox  register={register} checkboxTypes={checkboxTypes} /> : ''
                                     }
                                  </div>
                               </div>

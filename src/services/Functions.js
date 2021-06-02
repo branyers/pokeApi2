@@ -94,9 +94,9 @@ export function printStats(arrStats) {
 export function printMoves(arrMoves) {
   const retArr = arrMoves.map((element) => {
     return (
-      <p key={element.move.url}>
+      <button className="btn margin" key={element.move.url}>
         {element.move.name}
-      </p>
+      </button>
     );
   });
   return retArr;
@@ -105,9 +105,9 @@ export function printMoves(arrMoves) {
 export function printAbilities(arrAbilities) {
   const retArr = arrAbilities.map((element) => {
     return (
-      <p key={element.ability.name}>
+      <button className="btn margin" key={element.ability.name}>
         {element.ability.name}
-      </p>
+      </button>
     );
   });
   return retArr;
@@ -119,24 +119,24 @@ export async function printEncounters(arrEncounters) {
     const data = await response.json();
     if (!data.length) {
       return [
-        <p key="Encounter-undefined">
+        <button className="margin" key="Encounter-undefined">
           Unknow
-        </p>,
+        </button>,
       ];
     }
     const retArr = data.map((element, index) => {
       return (
-        <p key={index}>
+        <button className="margin" key={index}>
           Encounter: {element.location_area.name}
-        </p>
+        </button>
       );
     });
     return retArr;
   } catch (err) {
     return [
-      <p key="Encounter-undefined">
+      <button className="margin" key="Encounter-undefined">
         Unknow
-      </p>,
+      </button>,
     ];
   }
 }
