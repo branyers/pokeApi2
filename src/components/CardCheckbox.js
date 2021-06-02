@@ -1,7 +1,6 @@
 import React from 'react'
 
 const CardCheckbox = ({ register, checkboxTypes }) => {
-   console.log(checkboxTypes);
    return (
       <div className="menu-pokes-in-box-type">
          {

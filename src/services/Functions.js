@@ -119,14 +119,14 @@ export async function printEncounters(arrEncounters) {
     const data = await response.json();
     if (!data.length) {
       return [
-        <button className="margin" key="Encounter-undefined">
+        <button className="margin btn" key="Encounter-undefined">
           Unknow
         </button>,
       ];
     }
     const retArr = data.map((element, index) => {
       return (
-        <button className="margin" key={index}>
+        <button className="margin btn " key={index}>
           Encounter: {element.location_area.name}
         </button>
       );
@@ -134,7 +134,7 @@ export async function printEncounters(arrEncounters) {
     return retArr;
   } catch (err) {
     return [
-      <button className="margin" key="Encounter-undefined">
+      <button className="margin btn" key="Encounter-undefined">
         Unknow
       </button>,
     ];

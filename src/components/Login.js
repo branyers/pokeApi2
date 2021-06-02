@@ -31,7 +31,6 @@ function Login() {
                </div>
                <div className="row mt-4">
                   <button className="btn btn-primary"  onClick={(e) => {
-                     console.log(valueInput);
                      handleClick( valueInput )
                   }}>
                   iniciar session

@@ -52,11 +52,15 @@ function Encounters() {
         </>
       )}
       {encountersData.length !== 0 && (
-        <section >
-          <div >
-            {encountersData}
+        < >
+          <div className="container" >
+             <div className="row">
+                <div className="">
+                  {encountersData}
+                </div>
+             </div>
           </div>
-        </section>
+        </>
       )}
     </>
   );

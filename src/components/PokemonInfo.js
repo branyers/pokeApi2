@@ -86,50 +86,50 @@ function PokemonInfo() {
       )}
       {location.state?.dataPokemon && (
         <section >
-           <div className="container ">
-              <div className="row-cards-two ">
-                 <div className="card-one">
-                    <div className="img-poke-encounter">
-                        <img className="img-poke"  src={validateImg(dataRef.sprites)} alt={dataRef.name}/>
-                     </div>
-                     <div className="card-body">
-                        <div className="info-one">
-                           <div className="colum">
-                              <div className="displ-flex">
-                           {printTypes(dataRef.types)}
+           <div className="container section-container">
+              <div className="row">
+                  <div className="card-one col-8 col-md-4 col-lg-4">
+                     <div className="img-poke-encounter">
+                        <h4 className="mt-1 text-center" >{dataRef.name}</h4>
+                           <img className="img-poke"  src={validateImg(dataRef.sprites)} alt={dataRef.name}/>
                         </div>
-                              <h4 >{dataRef.name}</h4>
+                        <div className="card-body-cards">
+                           <div className="info-one">
                               <h2 >#{dataRef.order}</h2>
-                              <p className="row-hola">
+                              <div className="titles-cards">
+                                 {printTypes(dataRef.types)}
+                              </div>
+                              <p className="titles-cards">
                                  Height: {dataRef.height}
                               </p>
-                              <p className="row-hola" >
+                              <p className="titles-cards" >
                                  Weight: {dataRef.weight}
                               </p>
-                              <div className="">
+                              <div className="titles-cards">
                                  {printStats(dataRef.stats)}
                               </div>
                            </div>
                         </div>
                      </div>
-                  </div>
 
-                 <div className="card-two">
-                     <div className="info-two " >
+                  <div className="card-two col-md-8">
+                     <h4 className="text-center" >Info poke</h4>
+                        <div className="info-two " >
                            <div className="row">
                               <div className="card-info-habilities">
                                  <div className="displ-flex">
                                     {printMoves(dataRef.moves)}
-                                 </div>
-                                 <div className="displ-flex" >
-                                    {printAbilities(dataRef.abilities)}
+                                    <div className="displ-flex" >
+                                       {printAbilities(dataRef.abilities)}
+                                    </div>
                                  </div>
                               </div>
                            </div>
                         </div>
-                 </div>
+                     </div>
+
               </div>
-           </div>
+               </div>
         </section>
       )}
     </div>

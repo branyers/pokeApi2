@@ -5,8 +5,7 @@ export const authContenxt = createContext();
 const useProviderAuth = () => {
   const [user, setUser] = useState(null);
 
-  const signIn = (valueInput) => {
-     console.log(valueInput);
+  const signIn = () => {
     return setUser("User");
   };
 

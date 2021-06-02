@@ -144,6 +144,10 @@ Search by type
   padding: 10px;
   border-radius: 10px;
 }
+.text-center {
+  text-align: center;
+  color: aliceblue;
+}
 .name-checkbox {
   display: flex;
   flex-direction: row-reverse;
@@ -157,50 +161,67 @@ Search by type
 }
 
 /*
-  CARDS POKES 
+  CARDS POKEMON INFO  
 */
-section {
-  display: flex;
-  justify-content: center;
-}
-.row-cards-two {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-direction: column;
-}
-.card-one {
-  width: 50%;
-  border-radius: 30px;
-  color: black;
-  display: flex;
-  text-align: center;
-  background-color: violet;
-}
-.card-two {
-  border-radius: 20px;
-}
 .cards-pokes {
   display: flex;
-  background-color: tomato;
+  background-color: #fb6c6c;
   flex-direction: column;
   border-radius: 20px;
   max-height: 450px;
 }
+/*
+  CARD ONE  
+*/
+.section-container {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+}
+
+.card-one {
+  border-radius: 30px;
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  min-height: 420px;
+  background-color: #fb6c6c;
+}
+.img-poke-encounter {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+}
+
+.img-poke {
+  width: 100%;
+}
+
 .card-body-cards {
+  width: 100%;
   padding: 10px;
   background-color: cornsilk;
-  border-radius: 10px;
+  border-radius: 30px;
 }
 .titles-cards {
   font-size: 18px;
-  padding: 7px;
+  padding: 5px;
   font-family: sans-serif;
 }
 
 /*
   INFO POKE INDIVIDUAL 
 */
+a {
+  padding: 10px;
+  text-decoration: none;
+  color: tomato;
+  font-size: 20px;
+}
 .links-back {
   display: flex;
   justify-content: center;
@@ -216,16 +237,11 @@ section {
   flex-direction: column;
   justify-content: center;
 }
-.row-hola {
-  color: cornsilk;
-}
+
 .displ-flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-.img-poke {
-  width: 100%;
 }
 
 .card-poke-info {
@@ -234,15 +250,6 @@ section {
   justify-content: center;
   border: solid 3px white;
   min-height: 200px;
-}
-
-.img-poke-encounter {
-  display: flex;
-  justify-content: center;
-  width: 40%;
-}
-.info-one {
-  color: black;
 }
 .info-two {
   display: flex;
