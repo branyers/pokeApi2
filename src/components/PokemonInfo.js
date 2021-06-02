@@ -124,14 +124,13 @@ function PokemonInfo() {
                                     <div className="displ-flex" >
                                        {printAbilities(dataRef.abilities)}
                                     </div>
-                                 </div>
                               </div>
                            </div>
                         </div>
                      </div>
-
+                  </div>
               </div>
-               </div>
+            </div>
         </section>
       )}
     </div>

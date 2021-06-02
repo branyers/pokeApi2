@@ -53,7 +53,18 @@ function TypesContainer() {
   return (
     <GridContainer>
       {pokemonData.length === 0 && typeof pokemonData === "object" && (
-        <p>Loading...</p>
+        <div className="container">
+             <div className="row">
+                <div className="loading col-md-12">
+                   <div className = "loadingio-eclipse">
+                        <div className = "ldio-rpinwye8j0b">
+                           <div>
+                           </div>
+                        </div> 
+                     </div>
+                </div>
+             </div>
+         </div>
       )}
       {pokemonList.length !== 0 &&
         pokemonData.length &&

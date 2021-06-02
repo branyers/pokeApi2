@@ -43,7 +43,7 @@ function Pagination({ numberOfPages, handlerChangePage, actualPage }) {
     if (numberOfPages) {
       generatePages(numberOfPages);
     }
-  }, [actualPage]);
+  }, [actualPage ]);
 
   return (
     <div className="Pokedex__pagination">{elements.length && elements}</div>
